@@ -14,4 +14,15 @@ public class ClienteTest {
         assertEquals("Carlos Silva", cliente.getNome());
         assertEquals(10, cliente.getDesconto());
     }
+    
+    
+@Test
+public void deveAlterarDescontoDoCliente() {
+    Cliente cliente = new Cliente(2, "Ana", 5);
+
+    cliente.setDesconto(15);
+
+    assertEquals(15, cliente.getDesconto());
+}
+
 }
