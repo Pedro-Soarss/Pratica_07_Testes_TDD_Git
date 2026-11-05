@@ -14,7 +14,7 @@ public class ClienteTest {
         assertEquals("Carlos Silva", cliente.getNome());
         assertEquals(10, cliente.getDesconto());
     }
-    
+
     
 @Test
 public void deveAlterarDescontoDoCliente() {
@@ -23,6 +23,15 @@ public void deveAlterarDescontoDoCliente() {
     cliente.setDesconto(15);
 
     assertEquals(15, cliente.getDesconto());
+}
+
+@Test
+public void deveRetornarDadosFormatadosDoCliente() {
+    Cliente cliente = new Cliente(3, "Pedro", 20);
+
+    String resultado = cliente.toString();
+
+    assertEquals("Pedro(3)(20%)", resultado);
 }
 
 }
