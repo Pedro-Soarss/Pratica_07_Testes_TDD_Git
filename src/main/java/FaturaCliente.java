@@ -38,4 +38,9 @@ public double getValorComDesconto() {
         }
         return valor * (1.0 - (cliente.getDesconto() / 100.0));
     }
+    @Override
+    public String toString() {
+        String clienteStr = (cliente != null) ? cliente.toString() : "null";
+        return "Fatura [id=" + id + ", cliente=" + clienteStr + ", valor=" + valor + "]";
+    }
 }
