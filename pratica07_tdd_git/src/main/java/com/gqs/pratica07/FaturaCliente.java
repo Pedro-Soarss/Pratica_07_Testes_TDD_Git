@@ -1,10 +1,24 @@
+
 package com.gqs.pratica07;
 
+/**
+ * Representa uma fatura associada a um cliente.
+ */
 public class FaturaCliente {
+    /** Percentual usado para calcular o desconto. */
+    private static final double PERCENTUAL = 100.0;
+
     private int id;
     private Cliente cliente;
     private double valor;
 
+    /**
+     * Cria uma fatura com cliente e valor.
+     *
+     * @param id identificador da fatura
+     * @param cliente cliente associado
+     * @param valor valor da fatura
+     */
     public FaturaCliente(int id, Cliente cliente, double valor) {
         this.id = id;
         this.cliente = cliente;
@@ -31,12 +45,9 @@ public class FaturaCliente {
         return valor;
     }
 
-       public void setValor(double valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
-
-    /** Percentual usado para calcular o desconto. */
-    private static final double PERCENTUAL = 100.0;
 
     /**
      * Calcula o valor da fatura com o desconto do cliente.
@@ -52,7 +63,7 @@ public class FaturaCliente {
 
     @Override
     public String toString() {
-     String clienteStr = (cliente != null) ? cliente.toString() : "null";
-    return "Fatura [id=" + id + ", cliente=" + clienteStr + ", valor=" + valor + "]";
+        String clienteStr = (cliente != null) ? cliente.toString() : "null";
+        return "Fatura [id=" + id + ", cliente=" + clienteStr + ", valor=" + valor + "]";
     }
 }
