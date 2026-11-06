@@ -11,6 +11,13 @@ public class Cliente {
     private int desconto;
     private String genero;
 
+    /**
+     * Cria um cliente com identificador, nome e desconto.
+     *
+     * @param id identificador do cliente
+     * @param nome nome do cliente
+     * @param desconto percentual de desconto
+     */
     public Cliente(int id, String nome, int desconto) {
         this.id = id;
         this.nome = nome;

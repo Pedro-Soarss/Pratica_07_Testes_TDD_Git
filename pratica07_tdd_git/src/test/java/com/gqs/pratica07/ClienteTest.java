@@ -2,44 +2,54 @@
 package com.gqs.pratica07;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
+/**
+ * Testes unitarios da classe Cliente.
+ */
 public class ClienteTest {
 
     @Test
     public void deveCriarClienteComDadosCorretos() {
-        Cliente cliente = new Cliente(1, "Carlos Silva", 10);
+        final int descontoEsperado = 10;
+        Cliente cliente = new Cliente(1, "Carlos Silva", descontoEsperado);
 
         assertEquals(1, cliente.getId());
         assertEquals("Carlos Silva", cliente.getNome());
-        assertEquals(10, cliente.getDesconto());
+        assertEquals(descontoEsperado, cliente.getDesconto());
     }
 
-    
-@Test
-public void deveAlterarDescontoDoCliente() {
-    Cliente cliente = new Cliente(2, "Ana", 5);
+    @Test
+    public void deveAlterarDescontoDoCliente() {
+        final int descontoInicial = 5;
+        final int novoDesconto = 15;
 
-    cliente.setDesconto(15);
+        Cliente cliente = new Cliente(2, "Ana", descontoInicial);
 
-    assertEquals(15, cliente.getDesconto());
-}
+        cliente.setDesconto(novoDesconto);
 
-@Test
-public void deveRetornarDadosFormatadosDoCliente() {
-    Cliente cliente = new Cliente(3, "Pedro", 20);
+        assertEquals(novoDesconto, cliente.getDesconto());
+    }
 
-    String resultado = cliente.toString();
+    @Test
+    public void deveRetornarDadosFormatadosDoCliente() {
+        final int idCliente = 3;
+        final int desconto = 20;
+        Cliente cliente = new Cliente(idCliente, "Pedro", desconto);
 
-    assertEquals("Pedro(3)(20%)", resultado);
-}
+        String resultado = cliente.toString();
 
-@Test
-public void deveRetornarGeneroNaoInformado() {
-    Cliente cliente = new Cliente(4, "Mariana", 10);
+        assertEquals("Pedro(3)(20%)", resultado);
+    }
 
-    assertNull(cliente.getGenero());
-}
+    @Test
+    public void deveRetornarGeneroNaoInformado() {
+        final int idCliente = 4;
+        final int desconto = 10;
+        Cliente cliente = new Cliente(idCliente, "Mariana", desconto);
 
+        assertNull(cliente.getGenero());
+    }
 }
