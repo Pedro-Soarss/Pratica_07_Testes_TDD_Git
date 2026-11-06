@@ -32,4 +32,10 @@ public class FaturaCliente {
     public void setValor(double valor) {
         this.valor = valor;
     }
+public double getValorComDesconto() {
+        if (cliente == null) {
+            return valor;
+        }
+        return valor * (1.0 - (cliente.getDesconto() / 100.0));
+    }
 }

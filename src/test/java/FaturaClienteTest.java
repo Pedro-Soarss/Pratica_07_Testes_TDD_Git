@@ -28,3 +28,4 @@ public class FaturaClienteTest {
         // 200.0 - 10% de desconto = 180.0
         assertEquals(180.0, fatura.getValorComDesconto(), 0.001);
     }
+}
