@@ -3,6 +3,7 @@ package com.gqs.pratica07;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ClienteTest {
 
@@ -32,6 +33,13 @@ public void deveRetornarDadosFormatadosDoCliente() {
     String resultado = cliente.toString();
 
     assertEquals("Pedro(3)(20%)", resultado);
+}
+
+@Test
+public void deveRetornarGeneroNaoInformado() {
+    Cliente cliente = new Cliente(4, "Mariana", 10);
+
+    assertNull(cliente.getGenero());
 }
 
 }
