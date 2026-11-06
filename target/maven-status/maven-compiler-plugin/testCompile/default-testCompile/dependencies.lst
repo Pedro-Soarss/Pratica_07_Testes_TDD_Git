@@ -1,0 +1,7 @@
+classpath:/workspaces/Pratica_07_Testes_TDD_Git/target/classes	2:4f3ad6d396134529cf4ac8a20f3a35d6c6e541bf6f13d56a88254daf311966f4
+classpath:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar	210954:1690116754000
+classpath:/home/codespace/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar	14304:1688646332000
+classpath:/home/codespace/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar	106236:1690116754000
+classpath:/home/codespace/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar	6806:1624798415000
+classpath:/home/codespace/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar	244048:1690116761000
+classpath:/home/codespace/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar	204821:1690116754000
