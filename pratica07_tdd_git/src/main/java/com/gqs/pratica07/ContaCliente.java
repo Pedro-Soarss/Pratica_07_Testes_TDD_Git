@@ -1,3 +1,6 @@
+package com.gqs.pratica07;
+
+/** Representa uma conta associada a um cliente. */
 public class ContaCliente {
     private int numeroConta;
     private Cliente cliente;
@@ -6,12 +9,25 @@ public class ContaCliente {
     public ContaCliente() {
     }
 
+    /**
+     * Cria uma conta com saldo inicial.
+     *
+     * @param numeroConta numero da conta
+     * @param cliente cliente associado
+     * @param saldo saldo inicial
+     */
     public ContaCliente(int numeroConta, Cliente cliente, double saldo) {
         this.numeroConta = numeroConta;
         this.cliente = cliente;
         this.saldo = saldo;
     }
 
+    /**
+     * Cria uma conta com saldo zero.
+     *
+     * @param numeroConta numero da conta
+     * @param cliente cliente associado
+     */
     public ContaCliente(int numeroConta, Cliente cliente) {
         this.numeroConta = numeroConta;
         this.cliente = cliente;
@@ -42,12 +58,23 @@ public class ContaCliente {
         this.saldo = saldo;
     }
 
+    /**
+     * Adiciona um deposito positivo ao saldo.
+     *
+     * @param valor valor do deposito
+     */
     public void addDeposito(double valor) {
         if (valor > 0) {
             this.saldo += valor;
         }
     }
 
+    /**
+     * Desconta um valor quando existe saldo suficiente.
+     *
+     * @param valor valor a descontar
+     * @return true quando o desconto e realizado
+     */
     public boolean subSaldo(double valor) {
         if (valor > 0 && this.saldo >= valor) {
             this.saldo -= valor;

@@ -1,3 +1,5 @@
+package com.gqs.pratica07;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -33,7 +35,7 @@ public class FaturaClienteTest {
         Cliente cliente = new Cliente(1, "Miguel", 15);
         FaturaCliente fatura = new FaturaCliente(101, cliente, 300.0);
 
-        String esperado = "Fatura [id=101, cliente=Miguel (1) (15%), valor=300.0]";
+        String esperado = "Fatura [id=101, cliente=Miguel(1)(15%), valor=300.0]";
         assertEquals(esperado, fatura.toString());
     }
 }
