@@ -52,4 +52,46 @@ public class ClienteTest {
 
         assertNull(cliente.getGenero());
     }
+
+    @Test
+    public void deveCriarClienteComDescontoZeroPorCento() {
+        final int idCliente = 5;
+        final int descontoMinimo = 0;
+        Cliente cliente = new Cliente(idCliente, "Ana", descontoMinimo);
+
+        assertEquals(descontoMinimo, cliente.getDesconto());
+    }
+
+    @Test
+    public void deveCriarClienteComDescontoCemPorCento() {
+        final int idCliente = 6;
+        final int descontoMaximo = 100;
+        Cliente cliente = new Cliente(idCliente, "Bruno", descontoMaximo);
+
+        assertEquals(descontoMaximo, cliente.getDesconto());
+    }
+
+    @Test
+    public void deveAlterarDescontoParaZeroPorCento() {
+        final int idCliente = 7;
+        final int descontoInicial = 10;
+        final int descontoMinimo = 0;
+        Cliente cliente = new Cliente(idCliente, "Carla", descontoInicial);
+
+        cliente.setDesconto(descontoMinimo);
+
+        assertEquals(descontoMinimo, cliente.getDesconto());
+    }
+
+    @Test
+    public void deveAlterarDescontoParaCemPorCento() {
+        final int idCliente = 8;
+        final int descontoInicial = 10;
+        final int descontoMaximo = 100;
+        Cliente cliente = new Cliente(idCliente, "Diego", descontoInicial);
+
+        cliente.setDesconto(descontoMaximo);
+
+        assertEquals(descontoMaximo, cliente.getDesconto());
+    }
 }
