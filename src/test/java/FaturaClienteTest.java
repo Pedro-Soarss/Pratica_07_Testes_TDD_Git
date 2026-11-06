@@ -28,4 +28,12 @@ public class FaturaClienteTest {
         // 200.0 - 10% de desconto = 180.0
         assertEquals(180.0, fatura.getValorComDesconto(), 0.001);
     }
+@Test
+    void testToString() {
+        Cliente cliente = new Cliente(1, "Miguel", 15);
+        FaturaCliente fatura = new FaturaCliente(101, cliente, 300.0);
+
+        String esperado = "Fatura [id=101, cliente=Miguel (1) (15%), valor=300.0]";
+        assertEquals(esperado, fatura.toString());
+    }
 }
